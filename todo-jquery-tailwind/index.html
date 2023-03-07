@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do Lists - Four</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <div class="container shadow w-[500px] h-auto p-8">
+        <h2 class="title text-3xl">Todo</h2>
+
+        <form id="form" class="flex my-4">
+          <input
+            type="text"
+            id="list"
+            class="border border-gray-300 w-full p-2 focus:outline-blue-500"
+            placeholder="Add New..."
+          />
+          <button
+            type="submit"
+            class="bg-blue-400 px-4 py-1 text-xl text-white ml-2"
+          >
+            +
+          </button>
+        </form>
+
+        <div class="flex">
+          <button
+            type="button"
+            id="all"
+            class="flex-1 border border-gray-200 px-12 py-2"
+          >
+            All
+          </button>
+          <button
+            type="button"
+            id="notdone"
+            class="flex-1 border border-gray-200 px-12 py-2 mx-2"
+          >
+            Active
+          </button>
+          <button
+            type="button"
+            id="done"
+            class="flex-1 border border-gray-200 px-8 py-2"
+          >
+            Completed
+          </button>
+        </div>
+
+        <ul class="my-4 list-none list-group" id="list-group"></ul>
+        <p class="text-gray-500"><span id="zero">0</span> items left</p>
+        <div class="flex mt-4">
+          <button
+            type="button"
+            id="checkAll"
+            class="flex-1 border border-gray-200 px-8 py-2 mr-4"
+          >
+            Check All
+          </button>
+          <button
+            type="button"
+            id="cleardone"
+            class="flex-1 border border-gray-200 px-8 py-2"
+          >
+            Clear Completed
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
